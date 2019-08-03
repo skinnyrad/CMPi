@@ -89,6 +89,7 @@ sudo apt install kismet
 echo
 echo "[*] Install Blue Hydra"
 echo
+sudo gem install bundler
 git clone https://github.com/pwnieexpress/blue_hydra.git /home/pi
 cd blue_hydra
 bundle install
