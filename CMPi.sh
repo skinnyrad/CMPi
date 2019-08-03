@@ -87,7 +87,7 @@ echo "********** Install Blue Hydra ********** "
 echo
 sudo gem install bundler
 mkdir /home/pi/blue_hydra
-git clone https://github.com/pwnieexpress/blue_hydra.git /home/pi
+git clone https://github.com/pwnieexpress/blue_hydra.git /home/pi/blue_hydra
 cd /home/pi/blue_hydra/
 bundle install
 
