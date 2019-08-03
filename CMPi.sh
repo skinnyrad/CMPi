@@ -27,17 +27,16 @@ KISMET_BACK=..
 
 echo
 echo "  _____ _____ _____ ___  ___ ______ _  "
-echo " |_   _/  ___/  __ \|  \/  | | ___ (_) "
-echo "   | | \ `--.| /  \/| .  . | | |_/ /   "
-echo "   | |  `--. \ |    | |\/| | |  __/| | "
-echo "   | | /\__/ / \__/\| |  | | | |   | | "
-echo "   \_/ \____/ \____/\_|  |_/ \_|   |_| "
+echo " |_   _/  ___/  __ \\|  \/  | | ___ (_) "
+echo "   | | \\ \`--.| /  \\/| .  . | | |_/ /   "
+echo "   | |  \`--. \\ |    | |\\/| | |  __/| | "
+echo "   | | /\\__/ / \\__/\\| |  | | | |   | | "
+echo "   \\_/ \\____/ \\____/\\_|  |_/ \\_|   |_| "
 echo
 echo
 
 echo "   Tools Versions:"
 echo "   - Ubertooth & libbtbb: $UBER_VERSION"
-echo "   - Kismet: $KISMET_VERSION"
 echo
 
 echo "  (*** Internet access is required ***)"
