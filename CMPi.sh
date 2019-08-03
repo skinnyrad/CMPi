@@ -89,7 +89,7 @@ sudo apt install kismet
 echo
 echo "[*] Install Blue Hydra"
 echo
-cd ~
+cd ..
 git clone https://github.com/pwnieexpress/blue_hydra.git
 cd blue_hydra
 bundle install
