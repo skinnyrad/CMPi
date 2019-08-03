@@ -35,24 +35,20 @@ echo "   \\_/ \\____/ \\____/\\_|  |_/ \\_|   |_| "
 echo
 echo
 
-echo "   Tools Versions:"
-echo "   - Ubertooth & libbtbb: $UBER_VERSION"
-echo
-
 echo "  (*** Internet access is required ***)"
-echo "  (*** This script will run for a few minutes. Be patient... ***)"
+echo "  (*** This script will run for a few minutes. ***)"
 echo
 echo "  Press any key to continue (or Ctrl+C):"
 read key
 
-echo "[*] Installing dependencies"
+echo "********** Installing dependencies ********** "
 echo
 sudo apt-get -y install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
 pkg-config libpcap-dev python-numpy python-pyside python-qt4 python-bluez python-dbus \
 sqlite3 bluez-tools ruby-dev bluez bluez-test-scripts libsqlite3-dev
 
 echo
-echo "[*] Building the Bluetooth baseband library (libbtbb)..."
+echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
 wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
 tar xf $LIBBTBB_FILENAME
 cd $LIBBTBB_DIR
@@ -64,7 +60,7 @@ sudo make install
 cd $LIBBTBB_BACK
 
 echo
-echo "[*] Installing Ubertooth tools..."
+echo "********** Installing Ubertooth tools ********** "
 echo
 wget $UBERTOOTH_URL -O $UBERTOOTH_FILENAME
 tar xf $UBERTOOTH_FILENAME
@@ -78,7 +74,7 @@ sudo ldconfig
 cd $UBERTOOTH_BACK
 
 echo
-echo "[*] Install Kismet"
+echo "********** Install Kismet ********** "
 echo
 sudo apt-get -y install libpcap0.8-dev libcap-dev pkg-config build-essential libnl-3-dev libnl-genl-3-dev libncurses5-dev libpcre3-dev libpcap-dev libcap-dev
 wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
@@ -87,11 +83,12 @@ sudo apt update
 sudo apt install kismet
 
 echo
-echo "[*] Install Blue Hydra"
+echo "********** Install Blue Hydra ********** "
 echo
 sudo gem install bundler
+mkdir /home/pi/blue_hydra
 git clone https://github.com/pwnieexpress/blue_hydra.git /home/pi
-cd blue_hydra
+cd /home/pi/blue_hydra/
 bundle install
 
 echo
