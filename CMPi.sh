@@ -25,18 +25,15 @@ UBERTOOTH_BACK=../../..
 
 KISMET_BACK=..
 
-# ASCII Art:
-# http://patorjk.com/software/taag/
-# Based on figlet
-
 echo
-echo " _____ _____ _____ ___  ___ ______ _ "
-echo "|_   _/  ___/  __ \|  \/  | | ___ (_)"
-echo "  | | \ `--.| /  \/| .  . | | |_/ /  "
-echo "  | |  `--. \ |    | |\/| | |  __/| |"
-echo "  | | /\__/ / \__/\| |  | | | |   | |"
-echo "  \_/ \____/ \____/\_|  |_/ \_|   |_|"
-                                     
+echo "  _____ _____ _____ ___  ___ ______ _  "
+echo " |_   _/  ___/  __ \|  \/  | | ___ (_) "
+echo "   | | \ `--.| /  \/| .  . | | |_/ /   "
+echo "   | |  `--. \ |    | |\/| | |  __/| | "
+echo "   | | /\__/ / \__/\| |  | | | |   | | "
+echo "   \_/ \____/ \____/\_|  |_/ \_|   |_| "
+echo
+echo
 
 echo "   Tools Versions:"
 echo "   - Ubertooth & libbtbb: $UBER_VERSION"
