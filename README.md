@@ -4,6 +4,6 @@ CMPi is an install script that allows the user to install Ubertooth, Ubertooth t
 
 To install type the following pressing Enter at the end of each line.
 
-git clone https://github.com/skinnyrad/CMPi.git
-cd CMPi
-sudo ./CMPi.sh
+$ git clone https://github.com/skinnyrad/CMPi.git
+$ cd CMPi
+$ sudo ./CMPi.sh
