@@ -1,2 +1,2 @@
-# TSCMPi
-TSCM Pi
+# CMPi
+CM Pi
