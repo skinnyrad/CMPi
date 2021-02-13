@@ -45,6 +45,7 @@ echo "********** Installing dependencies ********** "
 echo
 sudo apt-get -y install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
 pkg-config libpcap-dev python-numpy python-pyside python-qt4 python-bluez python-dbus \
+python3-numpy python3-qtpy python3-distutils python3-setuptools \
 sqlite3 bluez-tools ruby-dev bluez bluez-test-scripts libsqlite3-dev
 
 echo
