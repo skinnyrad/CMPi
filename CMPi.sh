@@ -76,23 +76,23 @@ sudo make install
 sudo ldconfig
 cd $UBERTOOTH_BACK
 
-echo
-echo "********** Install Kismet ********** "
-echo
-sudo apt-get -y install libpcap0.8-dev libcap-dev pkg-config build-essential libnl-3-dev libnl-genl-3-dev libncurses5-dev libpcre3-dev libpcap-dev libcap-dev
-wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
-echo 'deb https://www.kismetwireless.net/repos/apt/release/buster buster main' | sudo tee /etc/apt/sources.list.d/kismet.list
-sudo apt update
-sudo apt install kismet
+#echo
+#echo "********** Install Kismet ********** "
+#echo
+#sudo apt-get -y install libpcap0.8-dev libcap-dev pkg-config build-essential libnl-3-dev libnl-genl-3-dev libncurses5-dev libpcre3-dev libpcap-dev libcap-dev
+#wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
+#echo 'deb https://www.kismetwireless.net/repos/apt/release/buster buster main' | sudo tee /etc/apt/sources.list.d/kismet.list
+#sudo apt update
+#sudo apt install kismet
 
-echo
-echo "********** Install Blue Hydra ********** "
-echo
-sudo gem install bundler
-mkdir /home/pi/blue_hydra
-git clone https://github.com/pwnieexpress/blue_hydra.git /home/pi/blue_hydra
-cd /home/pi/blue_hydra/
-bundle install
+#echo
+#echo "********** Install Blue Hydra ********** "
+#echo
+#sudo gem install bundler
+#mkdir /home/pi/blue_hydra
+#git clone https://github.com/pwnieexpress/blue_hydra.git /home/pi/blue_hydra
+#cd /home/pi/blue_hydra/
+#bundle install
 
 echo
 echo "[*] End of the install script. Congratulations! ;)"
