@@ -10,7 +10,7 @@ CMPi is an install script that allows the user to install Ubertooth, Ubertooth t
 - Blue Hydra (https://github.com/pwnieexpress/blue_hydra)
 
 ## Required Hardware
-- Raspberry Pi 2, 3B+, or 4
+- Raspberry Pi 3B+ or 4
 - Ubertooth 1
 - Compliant USB WiFi adapter for Kismet
 - USB Bluetooth adapter or On-board Bluetooth interface
