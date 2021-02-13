@@ -49,32 +49,52 @@ python3-numpy python3-qtpy python3-distutils python3-setuptools \
 sqlite3 bluez-tools ruby-dev bluez bluez-test-scripts libsqlite3-dev
 cd ~
 
-echo
-echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
-wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
-tar -xf $LIBBTBB_FILENAME
-cd $LIBBTBB_DIR
+wget https://github.com/greatscottgadgets/libbtbb/archive/2020-12-R1.tar.gz -O libbtbb-2020-12-R1.tar.gz
+tar -xf libbtbb-2020-12-R1.tar.gz
+cd libbtbb-2020-12-R1
 mkdir build
 cd build
 cmake ..
 make
 sudo make install
 sudo ldconfig
-cd $LIBBTBB_BACK
 
-echo
-echo "********** Installing Ubertooth tools ********** "
-echo
-wget $UBERTOOTH_URL
-tar -xf $UBERTOOTH_FILENAME
-cd $UBERTOOTH_DIR_HOST
+wget https://github.com/greatscottgadgets/ubertooth/releases/download/2020-12-R1/ubertooth-2020-12-R1.tar.xz
+tar -xf ubertooth-2020-12-R1.tar.xz
+cd ubertooth-2020-12-R1/host
 mkdir build
 cd build
 cmake ..
 make
 sudo make install
 sudo ldconfig
-cd $UBERTOOTH_BACK
+
+#echo
+#echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
+#wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
+#tar -xf $LIBBTBB_FILENAME
+#cd $LIBBTBB_DIR
+#mkdir build
+#cd build
+#cmake ..
+#make
+#sudo make install
+#sudo ldconfig
+#cd $LIBBTBB_BACK
+
+#echo
+#echo "********** Installing Ubertooth tools ********** "
+#echo
+#wget $UBERTOOTH_URL
+#tar -xf $UBERTOOTH_FILENAME
+#cd $UBERTOOTH_DIR_HOST
+#mkdir build
+#cd build
+#cmake ..
+#make
+#sudo make install
+#sudo ldconfig
+#cd $UBERTOOTH_BACK
 
 #echo
 #echo "********** Install Kismet ********** "
