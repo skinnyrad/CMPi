@@ -52,7 +52,7 @@ cd ~
 echo
 echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
 wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
-tar xf $LIBBTBB_FILENAME
+tar -xf $LIBBTBB_FILENAME
 cd $LIBBTBB_DIR
 mkdir build
 cd build
@@ -66,7 +66,7 @@ echo
 echo "********** Installing Ubertooth tools ********** "
 echo
 wget $UBERTOOTH_URL
-tar xf $UBERTOOTH_FILENAME
+tar -xf $UBERTOOTH_FILENAME
 cd $UBERTOOTH_DIR_HOST
 mkdir build
 cd build
