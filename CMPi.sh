@@ -43,11 +43,11 @@ read key
 
 echo "********** Installing dependencies ********** "
 echo
+cd ~
 #sudo apt-get install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
 #pkg-config libpcap-dev python-pyside python-bluez python-dbus \
 #python3-numpy python3-qtpy python3-distutils python3-setuptools \
 #sqlite3 bluez-tools ruby-dev bluez bluez-test-scripts libsqlite3-dev
-#cd ~
 sudo apt install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev wget pkg-config python3-numpy python3-qtpy python3-distutils python3-setuptools
 
 wget https://github.com/greatscottgadgets/libbtbb/archive/2020-12-R1.tar.gz -O libbtbb-2020-12-R1.tar.gz
