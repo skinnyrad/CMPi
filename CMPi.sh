@@ -13,7 +13,7 @@ VERSION=2020-12-R1
 UBER_VERSION=2020-12-R1
 
 LIBBTBB_URL=https://github.com/greatscottgadgets/libbtbb/archive/$UBER_VERSION.tar.gz
-LIBBTBB_FILENAME=$UBER_VERSION.tar.gz
+LIBBTBB_FILENAME=libbtbb-$UBER_VERSION.tar.gz
 LIBBTBB_DIR=libbtbb-$UBER_VERSION
 LIBBTBB_BACK=../..
 
