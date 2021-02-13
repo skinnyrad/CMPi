@@ -5,12 +5,12 @@
 #
 # Modified by Jason Baird
 #
-# Ubertooth and libbtbb versions: 2018-12-R1
-# Kismet version: 2016-07-R1
+# Ubertooth and libbtbb versions: 2020-12-R1
+# Kismet version: 2020-12-R3
 
 # Versions
-VERSION=2018-12-R1
-UBER_VERSION=2018-12-R1
+VERSION=2020-12-R1
+UBER_VERSION=2020-12-R1
 
 LIBBTBB_URL=https://github.com/greatscottgadgets/libbtbb/archive/$UBER_VERSION.tar.gz
 LIBBTBB_FILENAME=libbtbb-$UBER_VERSION.tar.gz
@@ -78,7 +78,7 @@ echo "********** Install Kismet ********** "
 echo
 sudo apt-get -y install libpcap0.8-dev libcap-dev pkg-config build-essential libnl-3-dev libnl-genl-3-dev libncurses5-dev libpcre3-dev libpcap-dev libcap-dev
 wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
-echo 'deb https://www.kismetwireless.net/repos/apt/release/buster stretch main' | sudo tee /etc/apt/sources.list.d/kismet.list
+echo 'deb https://www.kismetwireless.net/repos/apt/release/kali kali main' | sudo tee /etc/apt/sources.list.d/kismet.list
 sudo apt update
 sudo apt install kismet
 
