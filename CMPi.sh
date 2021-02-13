@@ -65,7 +65,7 @@ cd $LIBBTBB_BACK
 echo
 echo "********** Installing Ubertooth tools ********** "
 echo
-wget $UBERTOOTH_URL -O $UBERTOOTH_FILENAME
+wget $UBERTOOTH_URL
 tar xf $UBERTOOTH_FILENAME
 cd $UBERTOOTH_DIR_HOST
 mkdir build
