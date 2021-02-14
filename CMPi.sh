@@ -44,77 +44,56 @@ read key
 echo "********** Installing dependencies ********** "
 echo
 cd ~
-#sudo apt-get install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
-#pkg-config libpcap-dev python-pyside python-bluez python-dbus \
-#python3-numpy python3-qtpy python3-distutils python3-setuptools \
-#sqlite3 bluez-tools ruby-dev bluez bluez-test-scripts libsqlite3-dev
-sudo apt install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev wget pkg-config python3-numpy python3-qtpy python3-distutils python3-setuptools
+sudo apt-get install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
+pkg-config libpcap-dev python-pyside python-bluez python-dbus \
+python3-numpy python3-qtpy python3-distutils python3-setuptools \
+sqlite3 bluez-tools ruby-dev bluez bluez-test-scripts libsqlite3-dev
 
-wget https://github.com/greatscottgadgets/libbtbb/archive/2020-12-R1.tar.gz -O libbtbb-2020-12-R1.tar.gz
-tar -xf libbtbb-2020-12-R1.tar.gz
-cd libbtbb-2020-12-R1
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo ldconfig
-cd ~
-
-wget https://github.com/greatscottgadgets/ubertooth/releases/download/2020-12-R1/ubertooth-2020-12-R1.tar.xz
-tar -xf ubertooth-2020-12-R1.tar.xz
-cd ubertooth-2020-12-R1/host
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo ldconfig
-
-#echo
-#echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
-#wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
-#tar -xf $LIBBTBB_FILENAME
-#cd $LIBBTBB_DIR
-#mkdir build
-#cd build
-#cmake ..
-#make
-#sudo make install
-#sudo ldconfig
-#cd $LIBBTBB_BACK
-
-#echo
-#echo "********** Installing Ubertooth tools ********** "
-#echo
-#wget $UBERTOOTH_URL
-#tar -xf $UBERTOOTH_FILENAME
-#cd $UBERTOOTH_DIR_HOST
-#mkdir build
-#cd build
-#cmake ..
-#make
-#sudo make install
-#sudo ldconfig
-#cd $UBERTOOTH_BACK
-
-#echo
-#echo "********** Install Kismet ********** "
-#echo
+echo
+echo "********** Install Kismet ********** "
+echo
 #sudo apt-get -y install libpcap0.8-dev libcap-dev pkg-config build-essential libnl-3-dev libnl-genl-3-dev libncurses5-dev libpcre3-dev libpcap-dev libcap-dev
-#wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
-#echo 'deb https://www.kismetwireless.net/repos/apt/release/buster buster main' | sudo tee /etc/apt/sources.list.d/kismet.list
-#sudo apt update
-#sudo apt install kismet
+wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
+echo 'deb https://www.kismetwireless.net/repos/apt/release/buster buster main' | sudo tee /etc/apt/sources.list.d/kismet.list
+sudo apt update
+sudo apt install kismet
 
-#echo
-#echo "********** Install Blue Hydra ********** "
-#echo
-#sudo gem install bundler
-#mkdir /home/pi/blue_hydra
-#git clone https://github.com/pwnieexpress/blue_hydra.git /home/pi/blue_hydra
-#cd /home/pi/blue_hydra/
-#bundle install
+echo
+echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
+echo
+wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
+tar -xf $LIBBTBB_FILENAME
+cd $LIBBTBB_DIR
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo ldconfig
+cd $LIBBTBB_BACK
+
+echo
+echo "********** Installing Ubertooth tools ********** "
+echo
+wget $UBERTOOTH_URL
+tar -xf $UBERTOOTH_FILENAME
+cd $UBERTOOTH_DIR_HOST
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo ldconfig
+cd $UBERTOOTH_BACK
+
+echo
+echo "********** Install Blue Hydra ********** "
+echo
+sudo gem install bundler
+mkdir /home/pi/blue_hydra
+git clone https://github.com/pwnieexpress/blue_hydra.git /home/pi/blue_hydra
+cd /home/pi/blue_hydra/
+bundle install
 
 echo
 echo "[*] End of the install script. Congratulations! ;)"
