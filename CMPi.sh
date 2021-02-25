@@ -97,5 +97,10 @@ cd /home/pi/blue_hydra/
 bundle install
 
 echo
+echo "********** Install aircrack-ng ********** "
+echo
+sudo apt-get install aircrack-ng
+
+echo
 echo "[*] End of the install script. Congratulations! ;)"
 echo
