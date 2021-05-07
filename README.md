@@ -8,6 +8,7 @@ CMPi is an install script that allows the user to install Ubertooth, Ubertooth t
 - libbtbb (2020-12-R1)
 - Kismet 2020-12-R3 (https://www.kismetwireless.net/docs/readme/packages/)
 - Blue Hydra (https://github.com/pwnieexpress/blue_hydra)
+- Aircrack-ng
 
 ## Required Hardware
 - Raspberry Pi 3B+ or 4
