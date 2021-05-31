@@ -102,5 +102,17 @@ echo
 sudo apt-get install aircrack-ng
 
 echo
+echo "********** Fix LCD Screen/Bluetooth Serial Problem ********** "
+echo
+FILE22=/home/pi/LCD-show
+if [ -d "$FILE22" ]; then
+    echo "$FILE22 does exist."
+    sudo cp -rf /home/pi/CMPi/cmdline.txt /boot/cmdline.txt
+else
+    echo "There is no LCD Screen directory. Assuming no screen. Fix Terminated"
+fi
+
+echo
 echo "[*] End of the install script. Congratulations! ;)"
+echo "Remember to Reboot!"
 echo
