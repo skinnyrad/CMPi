@@ -45,16 +45,18 @@ echo "********** Installing dependencies ********** "
 echo
 cd ~
 sudo apt-get install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
-pkg-config libpcap-dev python-pyside python-bluez python-dbus \
+pkg-config libpcap-dev bluez-test-scripts libsqlite3-dev python-bluez \
 python3-numpy python3-qtpy python3-distutils python3-setuptools \
-sqlite3 bluez-tools ruby-dev bluez bluez-test-scripts libsqlite3-dev
+sqlite3 bluez-tools ruby-dev bluez
+
+pip install PySide
 
 echo
 echo "********** Install Kismet ********** "
 echo
 #sudo apt-get -y install libpcap0.8-dev libcap-dev pkg-config build-essential libnl-3-dev libnl-genl-3-dev libncurses5-dev libpcre3-dev libpcap-dev libcap-dev
 wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
-echo 'deb https://www.kismetwireless.net/repos/apt/release/buster buster main' | sudo tee /etc/apt/sources.list.d/kismet.list
+echo 'deb https://www.kismetwireless.net/repos/apt/release/bullseye bullseye main' | sudo tee /etc/apt/sources.list.d/kismet.list
 sudo apt update
 sudo apt install kismet
 sudo usermod -aG kismet pi
@@ -95,6 +97,7 @@ mkdir /home/pi/blue_hydra
 git clone https://github.com/pwnieexpress/blue_hydra.git /home/pi/blue_hydra
 cd /home/pi/blue_hydra/
 bundle install
+echo 'export PATH=$PATH:~/blue_hydra/bin/' >> ~/.bashrc
 
 echo
 echo "********** Install aircrack-ng ********** "
@@ -114,5 +117,6 @@ fi
 
 echo
 echo "[*] End of the install script. Congratulations! ;)"
-echo "Remember to Reboot!"
+echo
+echo "REMEMBER TO REBOOT!"
 echo
