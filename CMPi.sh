@@ -97,7 +97,6 @@ mkdir /home/pi/blue_hydra
 git clone https://github.com/pwnieexpress/blue_hydra.git /home/pi/blue_hydra
 cd /home/pi/blue_hydra/
 bundle install
-echo 'export PATH=$PATH:~/blue_hydra/bin/' >> ~/.bashrc
 
 echo
 echo "********** Install aircrack-ng ********** "
