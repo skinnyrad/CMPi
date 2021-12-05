@@ -97,6 +97,13 @@ cd /home/pi/blue_hydra/
 bundle install
 
 echo
+echo "****Adapting Blue Hydra to use Python3.9****"
+echo
+cd /home/pi/blue_hydra/bin/
+temp='#!\/usr\/bin\/python3.9'
+sed -i "1s/.*/$temp/" test-discovery
+
+echo
 echo "********** Install aircrack-ng ********** "
 echo
 sudo apt-get install aircrack-ng
