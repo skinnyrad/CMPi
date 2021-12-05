@@ -49,8 +49,6 @@ pkg-config libpcap-dev bluez-test-scripts libsqlite3-dev python3-bluez python3-d
 python3-numpy python3-qtpy python3-distutils python3-setuptools \
 sqlite3 bluez-tools ruby-dev bluez
 
-pip install PySide
-
 echo
 echo "********** Install Kismet ********** "
 echo
