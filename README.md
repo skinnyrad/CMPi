@@ -1,6 +1,6 @@
 # Countermeasures Pi
 
-CMPi is an install script that allows the user to install Ubertooth, Ubertooth tools, Kimset, Blue Hydra, and all their dependencies onto Raspbian. This current version of CMPi has been tested with a clean, Buster version of Raspbian.
+CMPi is an install script that allows the user to install Ubertooth, Ubertooth tools, Kimset, Blue Hydra, and all their dependencies onto Raspbian. This current version of CMPi has been tested with a clean, Bullseye version of Raspbian.
 
 ## Software Installed
 - Ubertooth dependencies and libraries (2020-12-R1) (https://github.com/greatscottgadgets/ubertooth)
