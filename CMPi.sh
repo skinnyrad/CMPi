@@ -116,7 +116,7 @@ if [ -d "$FILE22" ]; then
     echo "$FILE22 does exist."
     sudo cp -rf /home/pi/CMPi/cmdline.txt /boot/cmdline.txt
 else
-    echo "There is no LCD Screen directory. Assuming no screen. Fix Terminated"
+    echo "There is no small LCD Screen directory. Assuming no screen. Fix Terminated"
 fi
 
 echo
