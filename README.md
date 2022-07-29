@@ -22,6 +22,7 @@ CMPi is an install script that allows the user to install Ubertooth, Ubertooth t
 ## Optional Hardware
 - Miuzei Raspberry Pi 4 Touchscreen with Case & Fan (https://www.amazon.com/gp/product/B07XBVF1C9/ref=ppx_od_dt_b_asin_title_s01?ie=UTF8&psc=1)
 
+## Installation Procedure
 To install type the following pressing Enter at the end of each line.
 
 ```
