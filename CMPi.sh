@@ -124,6 +124,19 @@ if [ -d "$FILE22" ]; then
 else
     echo "There is no small LCD Screen directory. Assuming no screen or larger screen is being used. Fix Terminated"
 fi
+
+echo
+echo "**** Lighten up that Terminal Foreground ****"
+echo
+FILE23=~/.config/lxterminal/lxterminal.conf
+if [ -d "$FILE23" ]; then
+    echo "$FILE23 does exist."
+    sed -i 's/fgcolor=rgb(170,170,170)/fgcolor=rgb(255,255,255)/g' ~/.config/lxterminal/lxterminal.conf
+    echo "Enjoy a brighter text color in the Terminal!"
+else
+    echo "LX Terminal does not exist or the fgcolor has been changed to something else."
+fi
+
 echo
 echo "[*] End of the install script. Congratulations! ;)"
 echo
