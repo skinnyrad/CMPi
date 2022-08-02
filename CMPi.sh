@@ -91,17 +91,23 @@ echo
 echo "********** Install Blue Hydra ********** "
 echo
 sudo gem install bundler
-mkdir /home/pi/blue_hydra
-git clone https://github.com/pwnieexpress/blue_hydra.git /home/pi/blue_hydra
-cd /home/pi/blue_hydra/
+mkdir ~/blue_hydra
+git clone https://github.com/pwnieexpress/blue_hydra.git ~/blue_hydra
+cd ~/blue_hydra/
 bundle install
 
 echo
 echo "****Adapting Blue Hydra to use Python3.9****"
 echo
-cd /home/pi/blue_hydra/bin/
+cd ~/blue_hydra/bin/
 temp='#!\/usr\/bin\/python3.9'
 sed -i "1s/.*/$temp/" test-discovery
+
+echo
+echo "****Change Path to run Blue Hydra from Any Directory****"
+echo
+cd ~
+sudo echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
 
 echo
 echo "********** Install aircrack-ng ********** "
@@ -111,14 +117,13 @@ sudo apt-get install aircrack-ng
 echo
 echo "********** Fix LCD Screen/Bluetooth Serial Problem ********** "
 echo
-FILE22=/home/pi/LCD-show
+FILE22=~/LCD-show
 if [ -d "$FILE22" ]; then
     echo "$FILE22 does exist."
-    sudo cp -rf /home/pi/CMPi/cmdline.txt /boot/cmdline.txt
+    sudo cp -rf ~/CMPi/cmdline.txt /boot/cmdline.txt
 else
-    echo "There is no small LCD Screen directory. Assuming no screen. Fix Terminated"
+    echo "There is no small LCD Screen directory. Assuming no screen or larger screen is being used. Fix Terminated"
 fi
-
 echo
 echo "[*] End of the install script. Congratulations! ;)"
 echo
