@@ -107,7 +107,7 @@ echo
 echo "****Change Path to run Blue Hydra from Any Directory****"
 echo
 cd ~
-sudo echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+sudo echo 'export PATH="$HOME/blue_hydra/bin:$PATH"' >> ~/.bashrc
 
 echo
 echo "********** Install aircrack-ng ********** "
