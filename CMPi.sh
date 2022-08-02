@@ -129,7 +129,7 @@ echo
 echo "**** Lighten up that Terminal Foreground ****"
 echo
 FILE23=~/.config/lxterminal/lxterminal.conf
-if [ -d "$FILE23" ]; then
+if [ -f "$FILE23" ]; then
     echo "$FILE23 does exist."
     sed -i 's/fgcolor=rgb(170,170,170)/fgcolor=rgb(255,255,255)/g' ~/.config/lxterminal/lxterminal.conf
     echo "Enjoy a brighter text color in the Terminal!"
