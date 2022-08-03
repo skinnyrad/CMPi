@@ -104,18 +104,12 @@ temp='#!\/usr\/bin\/python3.9'
 sed -i "1s/.*/$temp/" test-discovery
 
 echo
-echo "****Change Path to run Blue Hydra from Any Directory****"
-echo
-cd ~
-sudo echo 'export PATH="$HOME/blue_hydra/bin:$PATH"' >> ~/.bashrc
-
-echo
 echo "********** Install aircrack-ng ********** "
 echo
 sudo apt-get install aircrack-ng
 
 echo
-echo "********** Fix LCD Screen/Bluetooth Serial Problem ********** "
+echo "********** Fix Small LCD Screen/Bluetooth Serial Problem ********** "
 echo
 FILE22=~/LCD-show
 if [ -d "$FILE22" ]; then
@@ -126,7 +120,7 @@ else
 fi
 
 echo
-echo "**** Lighten up that Terminal Foreground ****"
+echo "**** Lighten up that LXTerminal Foreground ****"
 echo
 FILE23=~/.config/lxterminal/lxterminal.conf
 if [ -f "$FILE23" ]; then
