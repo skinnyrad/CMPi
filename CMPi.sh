@@ -104,6 +104,12 @@ temp='#!\/usr\/bin\/python3.9'
 sed -i "1s/.*/$temp/" test-discovery
 
 echo
+echo "****Create Permanant alias for Blue_Hydra****"
+echo
+cd ~
+echo "alias blue_hydra='sudo ~/blue_hydra/bin/blue_hydra'" > .bash_aliases
+
+echo
 echo "********** Install aircrack-ng ********** "
 echo
 sudo apt-get install aircrack-ng
