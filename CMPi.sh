@@ -44,7 +44,7 @@ read key
 echo "********** Installing dependencies ********** "
 echo
 cd ~
-sudo apt-get install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
+sudo apt-get -y install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
 pkg-config libpcap-dev bluez-test-scripts libsqlite3-dev python3-bluez python3-dbus \
 python3-numpy python3-qtpy python3-distutils python3-setuptools \
 sqlite3 bluez-tools ruby-dev bluez
@@ -52,7 +52,6 @@ sqlite3 bluez-tools ruby-dev bluez
 echo
 echo "********** Install Kismet ********** "
 echo
-#sudo apt-get -y install libpcap0.8-dev libcap-dev pkg-config build-essential libnl-3-dev libnl-genl-3-dev libncurses5-dev libpcre3-dev libpcap-dev libcap-dev
 wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
 echo 'deb https://www.kismetwireless.net/repos/apt/release/bullseye bullseye main' | sudo tee /etc/apt/sources.list.d/kismet.list
 sudo apt update
@@ -112,7 +111,7 @@ echo "alias blue_hydra='sudo ~/blue_hydra/bin/blue_hydra'" > .bash_aliases
 echo
 echo "********** Install aircrack-ng ********** "
 echo
-sudo apt-get install aircrack-ng
+sudo apt-get -y install aircrack-ng
 
 echo
 echo "********** Fix Small LCD Screen/Bluetooth Serial Problem ********** "
