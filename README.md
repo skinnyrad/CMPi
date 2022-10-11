@@ -17,7 +17,7 @@ CMPi is an install script that allows the user to install Ubertooth, Ubertooth t
 - USB Bluetooth adapter or On-board Bluetooth interface
 
 ## Required Software
-- Raspbian Bullseye (https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-11-08/2021-10-30-raspios-bullseye-armhf.zip)
+- Raspbian Bullseye
 
 ## Optional Hardware
 - Miuzei Raspberry Pi 4 Touchscreen with Case & Fan (https://www.amazon.com/gp/product/B07XBVF1C9/ref=ppx_od_dt_b_asin_title_s01?ie=UTF8&psc=1)
