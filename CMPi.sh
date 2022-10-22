@@ -118,7 +118,7 @@ echo
 echo "****Create Permanent alias for Blue Sonar**
 echo
 cd ~
-echo "alias blue_sonar='sudo ~/blue_sonar/blue_sonar'"  >> .bash_aliases
+echo "alias blue_sonar='sudo ~/blue_sonar/blue_sonar'" >> .bash_aliases
 
 
 echo
