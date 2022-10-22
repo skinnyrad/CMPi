@@ -1,6 +1,6 @@
 # Countermeasures Pi
 
-CMPi is an install script that allows the user to install Ubertooth, Ubertooth tools, Kimset, Blue Hydra, and all their dependencies onto Raspbian. This current version of CMPi has been tested with a clean, Bullseye version of Raspbian.
+CMPi is an install script that allows the user to install a variety of wireless tools onto Raspbian. This current version of CMPi has been tested with a clean, Bullseye version of Raspbian.
 
 ## Software Installed
 - Ubertooth dependencies and libraries (2020-12-R1) (https://github.com/greatscottgadgets/ubertooth)
@@ -9,11 +9,12 @@ CMPi is an install script that allows the user to install Ubertooth, Ubertooth t
 - Kismet 2020-12-R3 (https://www.kismetwireless.net/docs/readme/packages/)
 - Blue Hydra (https://github.com/pwnieexpress/blue_hydra)
 - Aircrack-ng
+- Blue Sonar
 
 ## Required Hardware
 - Raspberry Pi 3B+ or 4
 - Ubertooth 1
-- Compliant USB WiFi adapter for Kismet
+- Monitor mode capable USB WiFi adapter
 - USB Bluetooth adapter or On-board Bluetooth interface
 
 ## Required Software
