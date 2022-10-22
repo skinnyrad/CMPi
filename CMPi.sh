@@ -103,10 +103,23 @@ temp='#!\/usr\/bin\/python3.9'
 sed -i "1s/.*/$temp/" test-discovery
 
 echo
-echo "****Create Permanant alias for Blue_Hydra****"
+echo "****Create Permanent alias for Blue_Hydra****"
 echo
 cd ~
 echo "alias blue_hydra='sudo ~/blue_hydra/bin/blue_hydra'" > .bash_aliases
+
+echo
+echo "****Install Blue Sonar****"
+echo
+cd ~
+git clone https://github.com/ZeroChaos-/blue_sonar
+
+echo
+echo "****Create Permanent alias for Blue Sonar**
+echo
+cd ~
+echo "alias blue_sonar='sudo ~/blue_sonar/blue_sonar'" 
+
 
 echo
 echo "********** Install aircrack-ng ********** "
