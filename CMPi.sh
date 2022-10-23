@@ -115,11 +115,10 @@ cd ~
 git clone https://github.com/ZeroChaos-/blue_sonar
 
 echo
-echo "****Create Permanent alias for Blue Sonar**
+echo "****Create Permanent alias for Blue Sonar****"
 echo
 cd ~
 echo "alias blue_sonar='sudo ~/blue_sonar/blue_sonar'" >> .bash_aliases
-
 
 echo
 echo "********** Install aircrack-ng ********** "
