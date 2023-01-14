@@ -47,7 +47,7 @@ cd ~
 sudo apt-get -y install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
 pkg-config libpcap-dev bluez-test-scripts libsqlite3-dev python3-bluez python3-dbus \
 python3-numpy python3-qtpy python3-distutils python3-setuptools \
-sqlite3 bluez-tools ruby-dev bluez
+sqlite3 bluez-tools ruby-dev bluez bundler
 
 echo
 echo "********** Install Kismet ********** "
@@ -89,7 +89,6 @@ cd $UBERTOOTH_BACK
 echo
 echo "********** Install Blue Hydra ********** "
 echo
-sudo gem install bundler
 mkdir ~/blue_hydra
 git clone https://github.com/pwnieexpress/blue_hydra.git ~/blue_hydra
 cd ~/blue_hydra/
