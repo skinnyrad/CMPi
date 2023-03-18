@@ -5,25 +5,18 @@
 #
 # Modified by Jason Baird
 #
-# Ubertooth and libbtbb versions: 2020-12-R1
-# Kismet version: 2020-12-R3
 
 # Versions
-VERSION=2020-12-R1
 UBER_VERSION=2020-12-R1
 
 LIBBTBB_URL=https://github.com/greatscottgadgets/libbtbb/archive/$UBER_VERSION.tar.gz
 LIBBTBB_FILENAME=libbtbb-$UBER_VERSION.tar.gz
 LIBBTBB_DIR=libbtbb-$UBER_VERSION
-LIBBTBB_BACK=../..
 
 UBERTOOTH_URL=https://github.com/greatscottgadgets/ubertooth/releases/download/$UBER_VERSION/ubertooth-$UBER_VERSION.tar.xz
 UBERTOOTH_FILENAME=ubertooth-$UBER_VERSION.tar.xz
 UBERTOOTH_DIR_HOST=ubertooth-$UBER_VERSION/host
 UBERTOOTH_DIR=ubertooth-$UBER_VERSION
-UBERTOOTH_BACK=../../..
-
-KISMET_BACK=..
 
 echo
 echo "  _____ _____ _____ ___  ___ ______ _  "
@@ -61,34 +54,54 @@ sudo usermod -aG kismet $USER
 echo
 echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
 echo
-wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
-tar -xf $LIBBTBB_FILENAME
-cd $LIBBTBB_DIR
+#wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
+#tar -xf $LIBBTBB_FILENAME
+#cd $LIBBTBB_DIR
+#mkdir build
+#cd build
+#cmake ..
+#make
+#sudo make install
+#sudo ldconfig
+cd ~
+wget https://github.com/greatscottgadgets/libbtbb/archive/2020-12-R1.tar.gz -O libbtbb-2020-12-R1.tar.gz
+tar -xf libbtbb-2020-12-R1.tar.gz
+cd libbtbb-2020-12-R1
 mkdir build
 cd build
 cmake ..
 make
 sudo make install
 sudo ldconfig
-cd $LIBBTBB_BACK
 
 echo
 echo "********** Installing Ubertooth tools ********** "
 echo
-wget $UBERTOOTH_URL
-tar -xf $UBERTOOTH_FILENAME
-cd $UBERTOOTH_DIR_HOST
+#wget $UBERTOOTH_URL
+#tar -xf $UBERTOOTH_FILENAME
+#cd $UBERTOOTH_DIR_HOST
+#mkdir build
+#cd build
+#cmake ..
+#make
+#sudo make install
+#sudo ldconfig
+cd ~
+wget https://github.com/greatscottgadgets/ubertooth/releases/download/2020-12-R1/ubertooth-2020-12-R1.tar.xz
+tar -xf ubertooth-2020-12-R1.tar.xz
+cd ubertooth-2020-12-R1/host
 mkdir build
 cd build
 cmake ..
 make
 sudo make install
 sudo ldconfig
-cd $UBERTOOTH_BACK
+
 
 echo
 echo "********** Install Blue Hydra ********** "
 echo
+cd~
 mkdir ~/blue_hydra
 git clone https://github.com/ZeroChaos-/blue_hydra.git ~/blue_hydra
 cd ~/blue_hydra/
