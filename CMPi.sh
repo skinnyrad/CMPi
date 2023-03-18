@@ -90,16 +90,9 @@ echo
 echo "********** Install Blue Hydra ********** "
 echo
 mkdir ~/blue_hydra
-git clone https://github.com/ZeroChaos~/blue_hydra.git ~/blue_hydra
+git clone https://github.com/ZeroChaos-/blue_hydra.git ~/blue_hydra
 cd ~/blue_hydra/
 bundle install
-
-echo
-echo "****Adapting Blue Hydra to use Python3.9****"
-echo
-cd ~/blue_hydra/bin/
-temp='#!\/usr\/bin\/python3.9'
-sed -i "1s/.*/$temp/" test-discovery
 
 echo
 echo "****Create Permanent alias for Blue_Hydra****"
