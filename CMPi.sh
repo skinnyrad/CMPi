@@ -90,7 +90,7 @@ echo
 echo "********** Install Blue Hydra ********** "
 echo
 mkdir ~/blue_hydra
-git clone https://github.com/pwnieexpress/blue_hydra.git ~/blue_hydra
+git clone https://github.com/ZeroChaos~/blue_hydra.git ~/blue_hydra
 cd ~/blue_hydra/
 bundle install
 
