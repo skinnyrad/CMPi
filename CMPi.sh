@@ -182,7 +182,7 @@ cd ~/.config/lxpanel/LXDE-pi/panels/
 echo 'Plugin {' >> panel
 echo '  type=launchbar' >> panel
 echo '  Config {' >> panel
-echo '    Button {' > panel
+echo '    Button {' >> panel
 echo '      id=toggle-keyboard.desktop' >> panel
 echo '    }' >> panel
 echo '  }' >> panel
