@@ -37,9 +37,9 @@ read key
 echo "********** Installing dependencies ********** "
 echo
 cd ~
-sudo apt-get -y install cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
+sudo apt-get -y install cmake build-essential libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
 pkg-config libpcap-dev bluez-test-scripts libsqlite3-dev python3-bluez python3-dbus \
-python3-numpy python3-qtpy python3-distutils python3-setuptools \
+python3-numpy python3-qtpy python3-distutils python3-setuptools git\
 sqlite3 bluez-tools ruby-dev bluez bundler
 
 echo
@@ -48,7 +48,7 @@ echo
 wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
 echo 'deb https://www.kismetwireless.net/repos/apt/release/bullseye bullseye main' | sudo tee /etc/apt/sources.list.d/kismet.list
 sudo apt update
-sudo apt -y install kismet
+sudo apt install kismet
 sudo usermod -aG kismet $USER
 
 echo
@@ -121,6 +121,18 @@ if [ -d "$FILE22" ]; then
 else
     echo "There is no small LCD Screen directory. Assuming no screen or larger screen is being used. Fix Terminated"
 fi
+
+echo
+echo "**** Install WiFi Coconut for OS and Kismet ****
+echo
+cd ~
+git clone https://github.com/hak5/hak5-wifi-coconut
+cd hak5-wifi-coconut
+mkdir build
+cd build
+cmake ../
+cd ~
+sudo apt-get -y install kismet-capture-hak5-wifi-coconut
 
 echo
 echo "**** Lighten up that LXTerminal Foreground ****"
