@@ -3,19 +3,21 @@
 CMPi is an install script that allows the user to install a variety of wireless tools onto Raspbian. This current version of CMPi has been tested with a clean, Bullseye version of Raspbian.
 
 ## Software Installed
-- Ubertooth dependencies and libraries (2020-12-R1) (https://github.com/greatscottgadgets/ubertooth)
 - Ubertooth tools (2020-12-R1)
 - libbtbb (2020-12-R1)
-- Kismet 2020-12-R3 (https://www.kismetwireless.net/docs/readme/packages/)
+- Kismet 2022-08-R1 (https://www.kismetwireless.net/docs/readme/packages/)
 - Blue Hydra (https://github.com/pwnieexpress/blue_hydra)
 - Aircrack-ng
 - Blue Sonar
+- WiFi Coconut (compatiable with Kismet)
+- Matchbox Keyboard (On-screen Keyboard)
 
-## Required Hardware
+## Suggested Operational Hardware
 - Raspberry Pi 3B+ or 4
 - Ubertooth 1
 - Monitor mode capable USB WiFi adapter
 - USB Bluetooth adapter or On-board Bluetooth interface
+- WiFi Coconut
 
 ## Required Software
 - Raspbian Bullseye
