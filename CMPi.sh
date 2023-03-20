@@ -40,7 +40,7 @@ cd ~
 sudo apt-get -y install cmake build-essential libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
 pkg-config libpcap-dev bluez-test-scripts libsqlite3-dev python3-bluez python3-dbus \
 python3-numpy python3-qtpy python3-distutils python3-setuptools git \
-sqlite3 bluez-tools ruby-dev bluez bundler matchbox-keyboard
+sqlite3 bluez-tools ruby-dev bluez bundler onboard
 
 echo
 echo "********** Install Kismet ********** "
@@ -145,49 +145,6 @@ if [ -f "$FILE23" ]; then
 else
     echo "LX Terminal does not exist or the fgcolor has been changed to something else."
 fi
-
-echo
-echo "**** Install On-screen Keyboard ****"
-echo
-
-# Create script to toggle keyboard on and off
-cd ~
-echo '#!/bin/bash' > toggle-keyboard.sh
-echo 'PID="$(pidof matchbox-keyboard)"' >> toggle-keyboard.sh
-echo 'if [  "$PID" != ""  ]; then' >> toggle-keyboard.sh
-echo '  kill $PID' >> toggle-keyboard.sh
-echo 'else' >> toggle-keyboard.sh
-echo '  matchbox-keyboard &' >> toggle-keyboard.sh
-echo 'fi' >> toggle-keyboard.sh
-chmod +x ~/toggle-keyboard.sh
-sudo chown root:root toggle-keyboard.sh
-sudo mv toggle-keyboard.sh /usr/bin/toggle-keyboard.sh
-
-# Create Desktop file
-cd ~
-echo '[Desktop Entry]' > toggle-keyboard.desktop
-echo 'Name=Toggle Virtual Keyboard' >> toggle-keyboard.desktop
-echo 'Comment=Toggle Virtual Keyboard' >> toggle-keyboard.desktop
-echo 'Exec=/usr/bin/toggle-keyboard.sh' >> toggle-keyboard.desktop
-echo 'Type=Application' >> toggle-keyboard.desktop
-echo 'Icon=matchbox-keyboard.png' >> toggle-keyboard.desktop
-echo 'Categories=Panel;Utility;MB' >> toggle-keyboard.desktop
-echo 'X-MB-INPUT-MECHANISM=True' >> toggle-keyboard.desktop
-sudo chown root:root toggle-keyboard.desktop
-sudo mv toggle-keyboard.desktop /usr/share/raspi-ui-overrides/applications/
-
-# Modify configuration
-cp /etc/xdg/lxpanel/LXDE-pi/panels/panel ~/.config/lxpanel/LXDE-pi/panels/panel
-cd ~/.config/lxpanel/LXDE-pi/panels/
-echo 'Plugin {' >> panel
-echo '  type=launchbar' >> panel
-echo '  Config {' >> panel
-echo '    Button {' >> panel
-echo '      id=toggle-keyboard.desktop' >> panel
-echo '    }' >> panel
-echo '  }' >> panel
-echo '}' >> panel
-
 
 echo
 echo "[*] End of the install script. Congratulations! ;)"
