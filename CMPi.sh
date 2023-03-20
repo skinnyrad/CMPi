@@ -121,7 +121,7 @@ mkdir build
 cd build
 cmake ../
 make
-make install
+sudo make install
 cd ~
 sudo apt-get -y install kismet-capture-hak5-wifi-coconut
 
