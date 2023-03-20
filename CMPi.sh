@@ -112,18 +112,7 @@ echo
 sudo apt-get -y install aircrack-ng
 
 echo
-echo "********** Fix Small LCD Screen/Bluetooth Serial Problem ********** "
-echo
-FILE22=~/LCD-show
-if [ -d "$FILE22" ]; then
-    echo "$FILE22 does exist."
-    sudo cp -rf ~/CMPi/cmdline.txt /boot/cmdline.txt
-else
-    echo "There is no small LCD Screen directory. Assuming no screen or larger screen is being used. Fix Terminated"
-fi
-
-echo
-echo "**** Install WiFi Coconut for OS and Kismet ****
+echo "**** Install WiFi Coconut for OS and Kismet ****"
 echo
 cd ~
 git clone https://github.com/hak5/hak5-wifi-coconut
@@ -133,6 +122,17 @@ cd build
 cmake ../
 cd ~
 sudo apt-get -y install kismet-capture-hak5-wifi-coconut
+
+echo
+echo "********** Fix Small LCD Screen/Bluetooth Serial Problem ********** "
+echo
+FILE22=~/LCD-show
+if [ -d "$FILE22" ]; then
+    echo "$FILE22 does exist."
+    sudo cp -rf ~/CMPi/cmdline.txt /boot/cmdline.txt
+else
+    echo "There is no small LCD Screen directory. Assuming no screen or larger screen is being used. Fix Terminated"
+fi
 
 echo
 echo "**** Lighten up that LXTerminal Foreground ****"
