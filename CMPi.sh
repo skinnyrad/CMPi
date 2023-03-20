@@ -46,7 +46,7 @@ echo
 echo "********** Install Kismet ********** "
 echo
 wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
-echo 'deb https://www.kismetwireless.net/repos/apt/release/bullseye bullseye main' | sudo tee /etc/apt/sources.list.d/kismet.list
+echo 'deb https://www.kismetwireless.net/repos/apt/git/bullseye bullseye main' | sudo tee /etc/apt/sources.list.d/kismet.list
 sudo apt update
 sudo apt -y install kismet
 sudo usermod -aG kismet $USER
