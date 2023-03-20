@@ -10,7 +10,7 @@ CMPi is an install script that allows the user to install a variety of wireless 
 - Aircrack-ng
 - Blue Sonar
 - WiFi Coconut (compatiable with Kismet)
-- Matchbox Keyboard (On-screen Keyboard)
+- Onboard On-screen Keyboard
 
 ## Suggested Operational Hardware
 - Raspberry Pi 3B+ or 4
