@@ -54,19 +54,10 @@ sudo usermod -aG kismet $USER
 echo
 echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
 echo
-#wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
-#tar -xf $LIBBTBB_FILENAME
-#cd $LIBBTBB_DIR
-#mkdir build
-#cd build
-#cmake ..
-#make
-#sudo make install
-#sudo ldconfig
 cd ~
-wget https://github.com/greatscottgadgets/libbtbb/archive/2020-12-R1.tar.gz -O libbtbb-2020-12-R1.tar.gz
-tar -xf libbtbb-2020-12-R1.tar.gz
-cd libbtbb-2020-12-R1
+wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
+tar -xf $LIBBTBB_FILENAME
+cd $LIBBTBB_DIR
 mkdir build
 cd build
 cmake ..
@@ -77,26 +68,16 @@ sudo ldconfig
 echo
 echo "********** Installing Ubertooth tools ********** "
 echo
-#wget $UBERTOOTH_URL
-#tar -xf $UBERTOOTH_FILENAME
-#cd $UBERTOOTH_DIR_HOST
-#mkdir build
-#cd build
-#cmake ..
-#make
-#sudo make install
-#sudo ldconfig
 cd ~
-wget https://github.com/greatscottgadgets/ubertooth/releases/download/2020-12-R1/ubertooth-2020-12-R1.tar.xz
-tar -xf ubertooth-2020-12-R1.tar.xz
-cd ubertooth-2020-12-R1/host
+wget $UBERTOOTH_URL
+tar -xf $UBERTOOTH_FILENAME
+cd $UBERTOOTH_DIR_HOST
 mkdir build
 cd build
 cmake ..
 make
 sudo make install
 sudo ldconfig
-
 
 echo
 echo "********** Install Blue Hydra ********** "
