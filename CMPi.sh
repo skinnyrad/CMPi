@@ -113,7 +113,7 @@ echo
 sudo apt-get -y install aircrack-ng
 
 echo
-echo "**** Install WiFi Coconut for OS and Kismet ****"
+echo "**** Install WiFi Coconut for OS ****"
 echo
 cd ~
 git clone https://github.com/hak5/hak5-wifi-coconut
@@ -124,7 +124,6 @@ cmake ../
 make
 sudo make install
 cd ~
-sudo apt-get -y install kismet-capture-hak5-wifi-coconut
 
 echo
 echo "********** Fix Small LCD Screen/Bluetooth Serial Problem ********** "
@@ -150,7 +149,15 @@ else
 fi
 
 echo
-echo "[*] End of the install script. Congratulations! ;)"
+echo "**** Skinny R&D Backgound ****"
 echo
-echo "REMEMBER TO REBOOT!"
+wget https://skinnyrd.com/wp-content/uploads/2023/02/Screensaver.png -O ~/Pictures/Desktop01.png
+pcmanfm --set-wallpaper ~/Pictures/Desktop01.png
+
 echo
+echo "**** A Reboot Will Occur in 10 Seconds ****"
+echo
+sleep 5
+echo "5 seconds remaining..."
+sleep 5
+reboot
