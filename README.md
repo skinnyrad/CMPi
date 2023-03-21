@@ -9,7 +9,7 @@ CMPi is an install script that allows the user to install a variety of wireless 
 - Blue Hydra (https://github.com/pwnieexpress/blue_hydra)
 - Aircrack-ng
 - Blue Sonar
-- WiFi Coconut (compatiable with Kismet)
+- WiFi Coconut
 - Onboard On-screen Keyboard
 
 ## Suggested Operational Hardware
