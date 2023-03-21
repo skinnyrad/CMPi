@@ -5,8 +5,8 @@ CMPi is an install script that allows the user to install a variety of wireless 
 ## Software Installed
 - Ubertooth tools (2020-12-R1)
 - libbtbb (2020-12-R1)
-- Kismet 2022-08-R1 (https://www.kismetwireless.net/docs/readme/packages/)
-- Blue Hydra (https://github.com/pwnieexpress/blue_hydra)
+- Kismet 2022-08-R1 (https://www.kismetwireless.net)
+- Blue Hydra (https://github.com/ZeroChaos-/blue_hydra)
 - Aircrack-ng
 - Blue Sonar
 - WiFi Coconut
