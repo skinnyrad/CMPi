@@ -12,19 +12,20 @@ CMPi is an install script that allows the user to install a variety of wireless 
 - WiFi Coconut
 - Onboard On-screen Keyboard
 
-## Suggested Operational Hardware
+## Required Hardware
 - Raspberry Pi 3B+ or 4
+
+## Suggested Operational Hardware
 - Ubertooth 1
 - Monitor mode capable USB WiFi adapter
 - USB Bluetooth adapter or On-board Bluetooth interface
 - WiFi Coconut
+- Miuzei Raspberry Pi 4 Touchscreen with Case & Fan (https://www.amazon.com/gp/product/B07XBVF1C9/ref=ppx_od_dt_b_asin_title_s01?ie=UTF8&psc=1)
+- or -
+- SunFounder TS-7 Pro 7 inch Raspberry Pi Touch Screen (https://www.sunfounder.com/collections/touchscreens/products/ts-7-pro-7-inch-touch-screen)
 
 ## Required Software
 - Raspbian Bullseye
-
-## Optional Hardware
-- Miuzei Raspberry Pi 4 Touchscreen with Case & Fan (https://www.amazon.com/gp/product/B07XBVF1C9/ref=ppx_od_dt_b_asin_title_s01?ie=UTF8&psc=1)
-- SunFounder TS-7 Pro 7 inch Raspberry Pi Touch Screen (https://www.sunfounder.com/collections/touchscreens/products/ts-7-pro-7-inch-touch-screen)
 
 ## Installation Procedure
 To install type the following pressing Enter at the end of each line.
