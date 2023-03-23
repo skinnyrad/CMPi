@@ -1,5 +1,5 @@
+![CMPi](https://user-images.githubusercontent.com/20311289/227289261-179803e4-cbce-460e-9dbe-7809d415c436.jpg)
 # Countermeasures Pi
-
 CMPi is an install script that allows the user to install a variety of wireless tools onto Raspbian. This current version of CMPi has been tested with a clean, Bullseye version of Raspbian.
 
 ## Software Installed
