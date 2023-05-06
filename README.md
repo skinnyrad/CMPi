@@ -10,6 +10,7 @@ CMPi is an install script that allows the user to install a variety of wireless 
 - Blue Sonar
 - WiFi Coconut
 - Onboard On-screen Keyboard
+- Gedit
 
 ## Required Hardware
 - Raspberry Pi 3B+ or 4
