@@ -46,10 +46,10 @@ sqlite3 bluez-tools ruby-dev bluez bundler onboard gedit
 echo
 echo "********** Install Kismet ********** "
 echo
-wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
-echo 'deb https://www.kismetwireless.net/repos/apt/git/bullseye bullseye main' | sudo tee /etc/apt/sources.list.d/kismet.list
+wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key --quiet | gpg --dearmor | sudo tee /usr/share/keyrings/kismet-archive-keyring.gpg >/dev/null
+echo 'deb [signed-by=/usr/share/keyrings/kismet-archive-keyring.gpg] https://www.kismetwireless.net/repos/apt/release/bullseye bullseye main' | sudo tee /etc/apt/sources.list.d/kismet.list >/dev/null
 sudo apt update
-sudo apt -y install kismet
+sudo apt install kismet
 sudo usermod -aG kismet $USER
 
 echo
