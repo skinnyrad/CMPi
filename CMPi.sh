@@ -90,40 +90,37 @@ cd ~/blue_hydra/
 bundle install
 
 echo
-echo "****Create Permanent alias for Blue_Hydra****"
-echo
-cd ~
-echo "alias blue_hydra='sudo ~/blue_hydra/bin/blue_hydra'" > .bash_aliases
-
-echo
 echo "****Install Blue Sonar****"
 echo
 cd ~
 git clone https://github.com/ZeroChaos-/blue_sonar
 
 echo
-echo "****Create Permanent alias for Blue Sonar****"
+echo "****Install Red Fang****"
+echo
+cd ~
+git clone https://gitlab.com/kalilinux/packages/redfang
+cd ~/redfang
+make
+
+echo "**** Install UAPfuzz ****"
+cd ~
+git clone https://github.com/skinnyrad/uapfuzz
+echo
+
+echo
+echo "****Create Permanent Aliases****"
 echo
 cd ~
 echo "alias blue_sonar='sudo ~/blue_sonar/blue_sonar'" >> .bash_aliases
+echo "alias blue_hydra='sudo ~/blue_hydra/bin/blue_hydra'" >> .bash_aliases
+echo "alias fang='sudo ~/redfang/fang'" >> .bash_aliases
+echo "alias uapfuzz='~/uapfuzz/uapfuzz.sh'" >> .bash_aliases
 
 echo
 echo "********** Install aircrack-ng ********** "
 echo
 sudo apt-get -y install aircrack-ng
-
-echo
-echo "**** Install WiFi Coconut for OS ****"
-echo
-cd ~
-git clone https://github.com/hak5/hak5-wifi-coconut
-cd hak5-wifi-coconut
-mkdir build
-cd build
-cmake ../
-make
-sudo make install
-cd ~
 
 echo
 echo "********** Fix Small LCD Screen/Bluetooth Serial Problem ********** "
