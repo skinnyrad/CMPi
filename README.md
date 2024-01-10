@@ -27,7 +27,7 @@ CMPi is an install script that allows the user to install a variety of wireless 
 - SunFounder TS-7 Pro 7 inch Raspberry Pi Touch Screen (https://www.sunfounder.com/collections/touchscreens/products/ts-7-pro-7-inch-touch-screen)
 
 ## Required Software
-- Raspbian Bullseye
+- Raspbian 64-bit (Bookworm)
 
 ## Installation Procedure
 To install type the following pressing Enter at the end of each line.
