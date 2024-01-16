@@ -8,7 +8,6 @@ CMPi is an install script that allows the user to install a variety of wireless 
 - Gedit
 - Kismet (https://www.kismetwireless.net)
 - libbtbb (2020-12-R1)
-- Onboard On-screen Keyboard
 - Red Fang
 - UAP Fuzz
 - Ubertooth tools (2020-12-R1)
