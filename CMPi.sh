@@ -44,15 +44,6 @@ python3-numpy python3-qtpy python3-distutils python3-setuptools \
 sqlite3 bluez-tools ruby-dev bluez bundler gedit wireshark
 
 echo
-echo "********** Install Kismet ********** "
-echo
-wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key --quiet | gpg --dearmor | sudo tee /usr/share/keyrings/kismet-archive-keyring.gpg >/dev/null
-echo 'deb [signed-by=/usr/share/keyrings/kismet-archive-keyring.gpg] https://www.kismetwireless.net/repos/apt/git/bookworm bookworm main' | sudo tee /etc/apt/sources.list.d/kismet.list >/dev/null
-sudo apt update
-sudo apt install kismet
-sudo usermod -aG kismet $USER
-
-echo
 echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
 echo
 cd ~
@@ -79,6 +70,15 @@ cmake ..
 make
 sudo make install
 sudo ldconfig
+
+echo
+echo "********** Install Kismet ********** "
+echo
+wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key --quiet | gpg --dearmor | sudo tee /usr/share/keyrings/kismet-archive-keyring.gpg >/dev/null
+echo 'deb [signed-by=/usr/share/keyrings/kismet-archive-keyring.gpg] https://www.kismetwireless.net/repos/apt/git/bookworm bookworm main' | sudo tee /etc/apt/sources.list.d/kismet.list >/dev/null
+sudo apt update
+sudo apt install kismet
+sudo usermod -aG kismet $USER
 
 echo
 echo "********** Install Blue Hydra ********** "
