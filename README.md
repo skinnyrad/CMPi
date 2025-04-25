@@ -12,12 +12,14 @@ CMPi is an install script that allows the user to install a variety of wireless 
 - UAP Fuzz
 - Ubertooth tools (2020-12-R1)
 - Wireshark
+- SDR++
 
 ## Required Hardware
 - Raspberry Pi 3B+ or 4
 
 ## Suggested Operational Hardware
 - Ubertooth 1
+- HackRF
 - Monitor mode capable USB WiFi adapter
 - USB Bluetooth adapter or On-board Bluetooth interface
 

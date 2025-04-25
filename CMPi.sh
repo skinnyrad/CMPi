@@ -108,6 +108,16 @@ cd ~
 git clone https://github.com/skinnyrad/uapfuzz
 echo
 
+echo "**** Install HackRF ****"
+cd ~
+sudo apt install hackrf
+echo
+
+echo "**** Install SDR++ ****"
+cd ~/CMPi
+sudo apt install ./sdrpp_raspbian_arm64.deb
+echo
+
 echo
 echo "****Create Permanent Aliases****"
 echo
