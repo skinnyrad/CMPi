@@ -115,7 +115,7 @@ echo
 
 echo "**** Install SDR++ ****"
 cd ~/CMPi
-sudo apt install ./sdrpp_raspbian_arm64.deb
+sudo dpkg -i sdrpp_raspbian_arm64.deb
 echo
 
 echo
