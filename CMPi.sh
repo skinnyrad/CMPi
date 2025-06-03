@@ -6,6 +6,14 @@
 # Modified by Jason Baird
 #
 
+echo
+echo "********** Checking Proper Use ********** "
+echo
+if [[ $EUID -eq 0 ]]; then
+    echo "ERROR: This script must NOT be run as root or with sudo privileges." >&2
+    exit 1
+fi
+
 # Versions
 UBER_VERSION=2020-12-R1
 
@@ -77,7 +85,7 @@ echo
 wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key --quiet | gpg --dearmor | sudo tee /usr/share/keyrings/kismet-archive-keyring.gpg >/dev/null
 echo 'deb [signed-by=/usr/share/keyrings/kismet-archive-keyring.gpg] https://www.kismetwireless.net/repos/apt/git/bookworm bookworm main' | sudo tee /etc/apt/sources.list.d/kismet.list >/dev/null
 sudo apt update
-sudo apt install kismet
+sudo apt -y install kismet
 sudo usermod -aG kismet $USER
 
 echo
@@ -106,6 +114,16 @@ make
 echo "**** Install UAPfuzz ****"
 cd ~
 git clone https://github.com/skinnyrad/uapfuzz
+echo
+
+echo "**** Install HackRF ****"
+cd ~
+sudo apt -y install hackrf
+echo
+
+echo "**** Install SDR++ ****"
+cd ~/CMPi
+sudo apt -y install ./sdrpp_raspbian_arm64.deb
 echo
 
 echo
