@@ -46,12 +46,14 @@ echo "********** Installing dependencies ********** "
 echo
 cd ~
 sudo apt-get update
-echo "*****************DEBUG 1***************"
+
 sudo apt-get -y install cmake build-essential libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
 pkg-config libpcap-dev bluez-test-scripts libsqlite3-dev python3-bluez python3-dbus \
-python3-numpy python3-qtpy python3-distutils python3-setuptools \
+python3-numpy python3-qtpy python3-setuptools \
 sqlite3 bluez-tools ruby-dev bluez bundler gedit wireshark
-echo "*****************DEBUG 2***************"
+
+echo "not instaling python3-distutils as normal"
+
 echo
 echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
 echo
