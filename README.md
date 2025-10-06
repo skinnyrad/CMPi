@@ -6,7 +6,7 @@ CMPi is an install script that allows the user to install a variety of wireless 
 - Blue Hydra (https://github.com/ZeroChaos-/blue_hydra)
 - Blue Sonar
 - Gedit
-- Kismet (https://www.kismetwireless.net)
+- Kismet Nightly Version (https://www.kismetwireless.net)
 - libbtbb (2020-12-R1)
 - Red Fang
 - UAP Fuzz
