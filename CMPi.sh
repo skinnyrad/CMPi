@@ -116,10 +116,9 @@ git clone https://github.com/ZeroChaos-/blue_sonar
 echo
 echo "****Install Red Fang****"
 echo
-cd ~
-git clone https://gitlab.com/kalilinux/packages/redfang
-cd ~/redfang
-make
+cd "$SCRIPT_DIR"
+sudo apt -y install ./redfang_debian_arm64.deb
+echo
 
 echo "**** Install UAPfuzz ****"
 cd ~
@@ -143,7 +142,6 @@ echo
 cd ~
 echo "alias blue_sonar='sudo ~/blue_sonar/blue_sonar'" >> .bash_aliases
 echo "alias blue_hydra='sudo ~/blue_hydra/bin/blue_hydra'" >> .bash_aliases
-echo "alias fang='sudo ~/redfang/fang'" >> .bash_aliases
 echo "alias uapfuzz='~/uapfuzz/uapfuzz.sh'" >> .bash_aliases
 
 echo
