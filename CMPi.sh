@@ -14,17 +14,7 @@ if [[ $EUID -eq 0 ]]; then
     exit 1
 fi
 
-# Versions
-UBER_VERSION=2020-12-R1
-
-LIBBTBB_URL=https://github.com/greatscottgadgets/libbtbb/archive/$UBER_VERSION.tar.gz
-LIBBTBB_FILENAME=libbtbb-$UBER_VERSION.tar.gz
-LIBBTBB_DIR=libbtbb-$UBER_VERSION
-
-UBERTOOTH_URL=https://github.com/greatscottgadgets/ubertooth/releases/download/$UBER_VERSION/ubertooth-$UBER_VERSION.tar.xz
-UBERTOOTH_FILENAME=ubertooth-$UBER_VERSION.tar.xz
-UBERTOOTH_DIR_HOST=ubertooth-$UBER_VERSION/host
-UBERTOOTH_DIR=ubertooth-$UBER_VERSION
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
 echo
 echo "  _____ _____ _____ ___  ___ ______ _  "
@@ -55,32 +45,18 @@ sqlite3 bluez-tools ruby-dev bluez bundler gedit wireshark
 echo "not instaling python3-distutils as normal"
 
 echo
-echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
+echo "********** Installing Local libubertooth1 ********** "
 echo
-cd ~
-wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
-tar -xf $LIBBTBB_FILENAME
-cd $LIBBTBB_DIR
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo ldconfig
+cd "$SCRIPT_DIR"
+sudo apt -y install ./libubertooth1_debian_arm64.deb
+echo
 
 echo
-echo "********** Installing Ubertooth tools ********** "
+echo "********** Installing Local ubertooth ********** "
 echo
-cd ~
-wget $UBERTOOTH_URL
-tar -xf $UBERTOOTH_FILENAME
-cd $UBERTOOTH_DIR_HOST
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo ldconfig
+cd "$SCRIPT_DIR"
+sudo apt -y install ./ubertooth_debian_arm64.deb
+echo
 
 echo
 echo "********** Install Kismet ********** "
@@ -140,10 +116,9 @@ git clone https://github.com/ZeroChaos-/blue_sonar
 echo
 echo "****Install Red Fang****"
 echo
-cd ~
-git clone https://gitlab.com/kalilinux/packages/redfang
-cd ~/redfang
-make
+cd "$SCRIPT_DIR"
+sudo apt -y install ./redfang_debian_arm64.deb
+echo
 
 echo "**** Install UAPfuzz ****"
 cd ~
@@ -156,8 +131,9 @@ sudo apt -y install hackrf
 echo
 
 echo "**** Install SDR++ ****"
-cd ~/CMPi
-sudo apt -y install ./sdrpp_raspbian_arm64.deb
+cd "$SCRIPT_DIR"
+wget https://github.com/AlexandreRouma/SDRPlusPlus/releases/download/nightly/sdrpp_debian_trixie_aarch64.deb
+sudo apt -y install ./sdrpp_debian_trixie_aarch64.deb
 echo
 
 echo
@@ -166,7 +142,6 @@ echo
 cd ~
 echo "alias blue_sonar='sudo ~/blue_sonar/blue_sonar'" >> .bash_aliases
 echo "alias blue_hydra='sudo ~/blue_hydra/bin/blue_hydra'" >> .bash_aliases
-echo "alias fang='sudo ~/redfang/fang'" >> .bash_aliases
 echo "alias uapfuzz='~/uapfuzz/uapfuzz.sh'" >> .bash_aliases
 
 echo
@@ -209,4 +184,4 @@ echo
 sleep 5
 echo "5 seconds remaining..."
 sleep 5
-reboot
+sudo reboot
