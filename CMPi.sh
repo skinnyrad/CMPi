@@ -184,4 +184,4 @@ echo
 sleep 5
 echo "5 seconds remaining..."
 sleep 5
-reboot
+sudo reboot
