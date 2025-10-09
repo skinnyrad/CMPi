@@ -14,17 +14,7 @@ if [[ $EUID -eq 0 ]]; then
     exit 1
 fi
 
-# Versions
-UBER_VERSION=2020-12-R1
-
-LIBBTBB_URL=https://github.com/greatscottgadgets/libbtbb/archive/$UBER_VERSION.tar.gz
-LIBBTBB_FILENAME=libbtbb-$UBER_VERSION.tar.gz
-LIBBTBB_DIR=libbtbb-$UBER_VERSION
-
-UBERTOOTH_URL=https://github.com/greatscottgadgets/ubertooth/releases/download/$UBER_VERSION/ubertooth-$UBER_VERSION.tar.xz
-UBERTOOTH_FILENAME=ubertooth-$UBER_VERSION.tar.xz
-UBERTOOTH_DIR_HOST=ubertooth-$UBER_VERSION/host
-UBERTOOTH_DIR=ubertooth-$UBER_VERSION
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
 echo
 echo "  _____ _____ _____ ___  ___ ______ _  "
@@ -57,14 +47,14 @@ echo "not instaling python3-distutils as normal"
 echo
 echo "********** Installing Local libubertooth1 ********** "
 echo
-cd "$(dirname "$0")"
+cd "$SCRIPT_DIR"
 sudo apt -y install ./libubertooth1_debian_arm64.deb
 echo
 
 echo
 echo "********** Installing Local ubertooth ********** "
 echo
-cd "$(dirname "$0")"
+cd "$SCRIPT_DIR"
 sudo apt -y install ./ubertooth_debian_arm64.deb
 echo
 
@@ -142,7 +132,7 @@ sudo apt -y install hackrf
 echo
 
 echo "**** Install SDR++ ****"
-cd "$(dirname "$0")"
+cd "$SCRIPT_DIR"
 wget https://github.com/AlexandreRouma/SDRPlusPlus/releases/download/nightly/sdrpp_debian_trixie_aarch64.deb
 sudo apt -y install ./sdrpp_debian_trixie_aarch64.deb
 echo
