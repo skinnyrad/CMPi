@@ -55,32 +55,18 @@ sqlite3 bluez-tools ruby-dev bluez bundler gedit wireshark
 echo "not instaling python3-distutils as normal"
 
 echo
-echo "********** Building the Bluetooth baseband library (libbtbb) ********** "
+echo "********** Installing Local libubertooth1 ********** "
 echo
-cd ~
-wget $LIBBTBB_URL -O $LIBBTBB_FILENAME
-tar -xf $LIBBTBB_FILENAME
-cd $LIBBTBB_DIR
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo ldconfig
+cd "$(dirname "$0")"
+sudo apt -y install ./libubertooth1_debian_arm64.deb
+echo
 
 echo
-echo "********** Installing Ubertooth tools ********** "
+echo "********** Installing Local ubertooth ********** "
 echo
-cd ~
-wget $UBERTOOTH_URL
-tar -xf $UBERTOOTH_FILENAME
-cd $UBERTOOTH_DIR_HOST
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo ldconfig
+cd "$(dirname "$0")"
+sudo apt -y install ./ubertooth_debian_arm64.deb
+echo
 
 echo
 echo "********** Install Kismet ********** "
@@ -156,8 +142,9 @@ sudo apt -y install hackrf
 echo
 
 echo "**** Install SDR++ ****"
-cd ~/CMPi
-sudo apt -y install ./sdrpp_raspbian_arm64.deb
+cd "$(dirname "$0")"
+wget https://github.com/AlexandreRouma/SDRPlusPlus/releases/download/nightly/sdrpp_debian_trixie_aarch64.deb
+sudo apt -y install ./sdrpp_debian_trixie_aarch64.deb
 echo
 
 echo
