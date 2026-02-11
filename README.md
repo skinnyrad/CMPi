@@ -1,5 +1,5 @@
 # Countermeasures Pi
-CMPi is an install script that allows the user to install a variety of wireless tools onto Raspbian. This current version of CMPi has been tested with a clean, Bullseye version of Raspbian.
+CMPi is an install script that allows the user to install a variety of wireless tools onto Raspbian. This current version of CMPi has been tested with a clean, Trixie version of Raspbian.
 
 ## Software Installed
 - Aircrack-ng
