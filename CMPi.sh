@@ -39,8 +39,8 @@ sudo apt-get update
 
 sudo apt-get -y install cmake build-essential libusb-1.0-0-dev make gcc g++ libbluetooth-dev \
 pkg-config libpcap-dev bluez-test-scripts libsqlite3-dev python3-bluez python3-dbus \
-python3-numpy python3-qtpy python3-setuptools \
-sqlite3 bluez-tools ruby-dev bluez bundler gedit wireshark
+python3-numpy python3-qtpy python3-setuptools sqlite3 bluez-tools ruby-dev bluez bundler gedit \
+wireshark cmake hackrf pkg-config libhackrf-dev libbtbb-dev libliquid-dev
 
 echo "not instaling python3-distutils as normal"
 
@@ -123,11 +123,6 @@ echo
 echo "**** Install UAPfuzz ****"
 cd ~
 git clone https://github.com/skinnyrad/uapfuzz
-echo
-
-echo "**** Install HackRF ****"
-cd ~
-sudo apt -y install hackrf
 echo
 
 echo "**** Install SDR++ ****"
