@@ -13,6 +13,7 @@ CMPi is an install script that allows the user to install a variety of wireless 
 - Ubertooth tools (2020-12-R1)
 - Wireshark
 - SDR++
+- Supertooth (https://github.com/daltoncox/supertooth)
 
 ## Required Hardware
 - Raspberry Pi 3B+ or 4
