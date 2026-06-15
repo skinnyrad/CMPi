@@ -156,17 +156,6 @@ echo
 sudo apt-get -y install aircrack-ng
 
 echo
-echo "********** Fix Small LCD Screen/Bluetooth Serial Problem ********** "
-echo
-FILE22=~/LCD-show
-if [ -d "$FILE22" ]; then
-    echo "$FILE22 does exist."
-    sudo cp -rf ~/CMPi/cmdline.txt /boot/cmdline.txt
-else
-    echo "There is no small LCD Screen directory. Assuming no screen or larger screen is being used. Fix Terminated"
-fi
-
-echo
 echo "**** Lighten up that LXTerminal Foreground ****"
 echo
 FILE23=~/.config/lxterminal/lxterminal.conf
