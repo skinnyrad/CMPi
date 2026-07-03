@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#
-# Adapted from the Ubertooth Install script by Raul Siles, DinoSec SL (www.dinosec.com)
-#
-# Modified by Jason Baird
-#
-
 echo
 echo "********** Checking Proper Use ********** "
 echo
@@ -62,7 +56,28 @@ echo
 echo "********** Install Kismet ********** "
 echo
 wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key --quiet | gpg --dearmor | sudo tee /usr/share/keyrings/kismet-archive-keyring.gpg >/dev/null
-echo 'deb [signed-by=/usr/share/keyrings/kismet-archive-keyring.gpg] https://www.kismetwireless.net/repos/apt/release/trixie trixie main' | sudo tee /etc/apt/sources.list.d/kismet.list >/dev/null
+
+echo "Choose Kismet channel:"
+echo "  1) Stable release"
+echo "  2) Nightly (git)"
+
+read -rp "Enter 1 or 2: " kismetchoice
+
+case "$kismetchoice" in
+  1)
+    echo "Using stable release repository..."
+    echo 'deb [signed-by=/usr/share/keyrings/kismet-archive-keyring.gpg] https://www.kismetwireless.net/repos/apt/release/trixie trixie main' | sudo tee /etc/apt/sources.list.d/kismet.list >/dev/null
+    ;;
+  2)
+    echo "Using nightly (git) repository..."
+    echo 'deb [signed-by=/usr/share/keyrings/kismet-archive-keyring.gpg] https://www.kismetwireless.net/repos/apt/git/trixie trixie main' | sudo tee /etc/apt/sources.list.d/kismet.list >/dev/null
+    ;;
+  *)
+    echo "Using stable release repository..."
+    echo 'deb [signed-by=/usr/share/keyrings/kismet-archive-keyring.gpg] https://www.kismetwireless.net/repos/apt/release/trixie trixie main' | sudo tee /etc/apt/sources.list.d/kismet.list >/dev/null
+    ;;
+esac
+
 sudo apt update
 sudo apt -y install kismet
 sudo usermod -aG kismet $USER
