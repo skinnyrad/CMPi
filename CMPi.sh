@@ -166,7 +166,7 @@ echo "alias supertooth-rx='~/supertooth/build/src/supertooth-rx'" >> .bash_alias
 echo "alias supertooth-hybrid='~/supertooth/build/src/supertooth-hybrid'" >> .bash_aliases
 
 echo
-echo "********** Install aircrack-ng ********** "
+echo "********** Install aircrack-ng **********"
 echo
 sudo apt-get -y install aircrack-ng
 
@@ -187,6 +187,9 @@ echo "**** Skinny R&D Backgound ****"
 echo
 wget https://skinnyrd.com/wp-content/uploads/2023/02/Screensaver.png -O ~/Pictures/Desktop01.png
 pcmanfm --set-wallpaper ~/Pictures/Desktop01.png
+
+echo "********** Unblocking All RF Interfaces **********"
+sudo rfkill unblock all
 
 echo
 echo "**** A Reboot Will Occur in 10 Seconds ****"
