@@ -147,11 +147,9 @@ sudo apt -y install ./sdrpp_debian_trixie_aarch64.deb
 echo
 
 echo "**** Installing Supertooth ****"
-cd ~
-git clone https://github.com/daltoncox/supertooth
-cd ~/supertooth/
-cmake -S . -B build
-cmake --build build
+cd "$SCRIPT_DIR"
+wget https://github.com/daltoncox/supertooth/releases/download/v0.2.3/supertooth_v0.2.3_arm64.deb
+sudo apt -y install ./supertooth_v0.2.3_arm64.deb
 echo
 
 echo
@@ -161,9 +159,6 @@ cd ~
 echo "alias blue_sonar='sudo ~/blue_sonar/blue_sonar'" >> .bash_aliases
 echo "alias blue_hydra='sudo ~/blue_hydra/bin/blue_hydra'" >> .bash_aliases
 echo "alias uapfuzz='~/uapfuzz/uapfuzz.sh'" >> .bash_aliases
-echo "alias supertooth-ble='~/supertooth/build/src/supertooth-ble'" >> .bash_aliases
-echo "alias supertooth-rx='~/supertooth/build/src/supertooth-rx'" >> .bash_aliases
-echo "alias supertooth-hybrid='~/supertooth/build/src/supertooth-hybrid'" >> .bash_aliases
 
 echo
 echo "********** Install aircrack-ng **********"
