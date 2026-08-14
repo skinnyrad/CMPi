@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#Version numbers for software
+SUPERT_VER=v0.2.4
+
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+
 echo
 echo "********** Checking Proper Use ********** "
 echo
@@ -7,8 +12,6 @@ if [[ $EUID -eq 0 ]]; then
     echo "ERROR: This script must NOT be run as root or with sudo privileges." >&2
     exit 1
 fi
-
-SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
 echo
 echo "  _____ _____ _____ ___  ___ ______ _  "
@@ -148,8 +151,8 @@ echo
 
 echo "**** Installing Supertooth ****"
 cd "$SCRIPT_DIR"
-wget https://github.com/daltoncox/supertooth/releases/download/v0.2.3/supertooth_v0.2.3_arm64.deb
-sudo apt -y install ./supertooth_v0.2.3_arm64.deb
+wget https://github.com/daltoncox/supertooth/releases/download/${SUPERT_VER}/supertooth_${SUPERT_VER}_arm64.deb
+sudo apt -y install ./supertooth_${SUPERT_VER}_arm64.deb
 echo
 
 echo
